@@ -1,0 +1,25 @@
+// Example: How to create contacts for different employees from backend
+
+// Example 1: Create contact for a specific employee (Admin only)
+// POST /api/contacts
+// Headers: Authorization: Bearer <admin_token>
+// Body:
+{
+  "name": "John Doe",
+  "phone": "1234567890",
+  "userId": "507f1f77bcf86cd799439011" // Employee's user ID
+}
+
+// Example 2: Create contact for logged-in user (Employee)
+// POST /api/contacts
+// Headers: Authorization: Bearer <employee_token>
+// Body:
+{
+  "name": "Jane Smith",
+  "phone": "0987654321"
+  // userId is automatically set to logged-in user
+}
+
+// Example 3: Create multiple contacts for different employees (Admin)
+// You can loop through and create contacts with different userIds
+
